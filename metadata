@@ -1,0 +1,333 @@
+--- !ruby/object:Gem::Specification
+name: azure
+version: !ruby/object:Gem::Version
+  version: 0.1.1
+  prerelease: 
+platform: ruby
+authors:
+- AppFog
+- Microsoft
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2012-06-27 00:00:00.000000000 -07:00
+default_executable: 
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: uuid
+  requirement: &2153658140 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '2.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: *2153658140
+- !ruby/object:Gem::Dependency
+  name: ratom
+  requirement: &2153638400 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '0.6'
+  type: :runtime
+  prerelease: false
+  version_requirements: *2153638400
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: &2153637920 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.5'
+  type: :runtime
+  prerelease: false
+  version_requirements: *2153637920
+- !ruby/object:Gem::Dependency
+  name: mime-types
+  requirement: &2153637420 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.0'
+  type: :runtime
+  prerelease: false
+  version_requirements: *2153637420
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: &2153637020 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *2153637020
+- !ruby/object:Gem::Dependency
+  name: minitest
+  requirement: &2153636440 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '3.0'
+  type: :development
+  prerelease: false
+  version_requirements: *2153636440
+- !ruby/object:Gem::Dependency
+  name: em-minitest-spec
+  requirement: &2153636000 !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: *2153636000
+description: Services and ruby SDKs to access the Windows Azure platform.
+email: azure@microsoft.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- Gemfile.lock
+- README.md
+- Rakefile
+- azure.gemspec
+- lib/azure.rb
+- lib/azure/atom.rb
+- lib/azure/auth.rb
+- lib/azure/blobs.rb
+- lib/azure/blobs/blob.rb
+- lib/azure/blobs/container.rb
+- lib/azure/blobs/service.rb
+- lib/azure/blobs/shared_access_signature.rb
+- lib/azure/blobs/uri.rb
+- lib/azure/configuration.rb
+- lib/azure/core/auth/shared_key.rb
+- lib/azure/core/auth/shared_key_lite.rb
+- lib/azure/core/collection.rb
+- lib/azure/core/service.rb
+- lib/azure/core/signer.rb
+- lib/azure/core/utils/interval.rb
+- lib/azure/core/utils/queryable.rb
+- lib/azure/core/utils/storage_service_properties.rb
+- lib/azure/core/utils/string.rb
+- lib/azure/error.rb
+- lib/azure/queues.rb
+- lib/azure/queues/message.rb
+- lib/azure/queues/queue.rb
+- lib/azure/queues/service.rb
+- lib/azure/queues/service_properties.rb
+- lib/azure/queues/uri.rb
+- lib/azure/request.rb
+- lib/azure/response.rb
+- lib/azure/service_bus.rb
+- lib/azure/service_bus/auth/authorizer.rb
+- lib/azure/service_bus/auth/uri.rb
+- lib/azure/service_bus/auth/wrap.rb
+- lib/azure/service_bus/auth/wrap_service.rb
+- lib/azure/service_bus/auth/wrap_token.rb
+- lib/azure/service_bus/auth/wrap_token_manager.rb
+- lib/azure/service_bus/brokered_message.rb
+- lib/azure/service_bus/brokered_message_serializer.rb
+- lib/azure/service_bus/queues.rb
+- lib/azure/service_bus/queues/queue.rb
+- lib/azure/service_bus/queues/queue_serializer.rb
+- lib/azure/service_bus/queues/service.rb
+- lib/azure/service_bus/queues/uri.rb
+- lib/azure/service_bus/rules.rb
+- lib/azure/service_bus/rules/rule.rb
+- lib/azure/service_bus/rules/service.rb
+- lib/azure/service_bus/rules/uri.rb
+- lib/azure/service_bus/service_bus_service.rb
+- lib/azure/service_bus/subscriptions.rb
+- lib/azure/service_bus/subscriptions/service.rb
+- lib/azure/service_bus/subscriptions/subscription.rb
+- lib/azure/service_bus/subscriptions/subscription_serializer.rb
+- lib/azure/service_bus/subscriptions/uri.rb
+- lib/azure/service_bus/topics.rb
+- lib/azure/service_bus/topics/service.rb
+- lib/azure/service_bus/topics/topic.rb
+- lib/azure/service_bus/topics/topic_serializer.rb
+- lib/azure/service_bus/topics/uri.rb
+- lib/azure/service_runtime/client/goal_state_pipe_monitor.rb
+- lib/azure/service_runtime/client/goal_state_protocol.rb
+- lib/azure/service_runtime/client/runtime_client.rb
+- lib/azure/service_runtime/deployment.rb
+- lib/azure/service_runtime/local_resource.rb
+- lib/azure/service_runtime/role.rb
+- lib/azure/service_runtime/role_environment.rb
+- lib/azure/service_runtime/role_environment_change.rb
+- lib/azure/service_runtime/role_instance.rb
+- lib/azure/service_runtime/role_instance_endpoint.rb
+- lib/azure/tables.rb
+- lib/azure/tables/auth/shared_key.rb
+- lib/azure/tables/auth/shared_key_lite.rb
+- lib/azure/tables/entities_collection.rb
+- lib/azure/tables/entity.rb
+- lib/azure/tables/service.rb
+- lib/azure/tables/table.rb
+- lib/azure/tables/tables_collection.rb
+- lib/azure/tables/types.rb
+- lib/azure/tables/uri.rb
+- test/fixtures/32px-fulls-black.jpg
+- test/fixtures/all_containers.xml
+- test/fixtures/all_tables.xml
+- test/fixtures/create_table_response_entry.xml
+- test/fixtures/error.xml
+- test/fixtures/insert_entity_response_entry.xml
+- test/fixtures/messages.xml
+- test/fixtures/query_entities_empty_response.xml
+- test/fixtures/query_entities_response.xml
+- test/fixtures/queue_service_properties.xml
+- test/fixtures/queue_service_properties_original.xml
+- test/fixtures/queues.xml
+- test/fixtures/sb_default_create_queue_response.xml
+- test/fixtures/sb_default_create_topic_response.xml
+- test/fixtures/sb_get_access_token_response.txt
+- test/fixtures/sb_queues_runtime_peek_message_response_headers.txt
+- test/integration/blobs/auth_test.rb
+- test/integration/blobs/blob_test.rb
+- test/integration/blobs/clear_page_range_test.rb
+- test/integration/blobs/copy_test.rb
+- test/integration/blobs/create_blobs_test.rb
+- test/integration/blobs/create_container_test.rb
+- test/integration/blobs/create_snapshot_test.rb
+- test/integration/blobs/delete_blob_snapshots_test.rb
+- test/integration/blobs/delete_blobs_test.rb
+- test/integration/blobs/delete_container_test.rb
+- test/integration/blobs/delete_snapshot_test.rb
+- test/integration/blobs/get_blob_snapshot_test.rb
+- test/integration/blobs/get_blobs_test.rb
+- test/integration/blobs/get_page_range_test.rb
+- test/integration/blobs/list_blobs_test.rb
+- test/integration/blobs/list_containers_test.rb
+- test/integration/blobs/manage_blob_leases_test.rb
+- test/integration/blobs/manage_blob_metadata_test.rb
+- test/integration/blobs/manage_blob_properties_test.rb
+- test/integration/blobs/manage_blob_service_properties_test.rb
+- test/integration/blobs/manage_container_metadata_test.rb
+- test/integration/blobs/manage_container_permissions_test.rb
+- test/integration/blobs/update_page_range_test.rb
+- test/integration/queues/clear_messages_test.rb
+- test/integration/queues/create_queue_test.rb
+- test/integration/queues/delete_message_test.rb
+- test/integration/queues/delete_queue_test.rb
+- test/integration/queues/get_messages_test.rb
+- test/integration/queues/list_queues_test.rb
+- test/integration/queues/manage_queue_metadata_test.rb
+- test/integration/queues/manage_queue_service_properties_test.rb
+- test/integration/queues/peek_messages_test.rb
+- test/integration/queues/put_message_test.rb
+- test/integration/queues/update_message_test.rb
+- test/integration/service_bus/auth_test.rb
+- test/integration/service_bus/queues/create_queue_test.rb
+- test/integration/service_bus/queues/delete_message_from_queue_test.rb
+- test/integration/service_bus/queues/delete_queue_test.rb
+- test/integration/service_bus/queues/get_queue_test.rb
+- test/integration/service_bus/queues/list_queues_test.rb
+- test/integration/service_bus/queues/peek_message_from_queue_test.rb
+- test/integration/service_bus/queues/read_and_delete_message_from_queue_test.rb
+- test/integration/service_bus/queues/send_message_to_queue_test.rb
+- test/integration/service_bus/queues/unlock_message_from_queue_test.rb
+- test/integration/service_bus/rules/create_rule_test.rb
+- test/integration/service_bus/rules/delete_rule_test.rb
+- test/integration/service_bus/rules/get_rule_test.rb
+- test/integration/service_bus/rules/list_rules_test.rb
+- test/integration/service_bus/rules/rule_test.rb
+- test/integration/service_bus/subscriptions/create_subscription_test.rb
+- test/integration/service_bus/subscriptions/delete_message_from_subscription_test.rb
+- test/integration/service_bus/subscriptions/delete_subscription_test.rb
+- test/integration/service_bus/subscriptions/fetch_subscription_test.rb
+- test/integration/service_bus/subscriptions/list_subscriptions_test.rb
+- test/integration/service_bus/subscriptions/peek_lock_message_from_subscription_test.rb
+- test/integration/service_bus/subscriptions/read_delete_message_from_subscription_test.rb
+- test/integration/service_bus/subscriptions/subscription_test.rb
+- test/integration/service_bus/subscriptions/unlock_message_from_subscription_test.rb
+- test/integration/service_bus/topics/create_topic_test.rb
+- test/integration/service_bus/topics/delete_topic_test.rb
+- test/integration/service_bus/topics/get_topic_test.rb
+- test/integration/service_bus/topics/list_topics_test.rb
+- test/integration/service_bus/topics/send_message_to_topic_test.rb
+- test/integration/tables/auth_test.rb
+- test/integration/tables/creating_tables_test.rb
+- test/integration/tables/delete_entity_test.rb
+- test/integration/tables/deleting_table_test.rb
+- test/integration/tables/insert_entity_test.rb
+- test/integration/tables/merge_entity_test.rb
+- test/integration/tables/query_entities_test.rb
+- test/integration/tables/query_tables_test.rb
+- test/integration/tables/update_entity_test.rb
+- test/integration/test_helper.rb
+- test/support/blobs.rb
+- test/support/env.rb
+- test/support/fixtures.rb
+- test/support/stubs.rb
+- test/support/table_names.rb
+- test/test_helper.rb
+- test/unit/atom_test.rb
+- test/unit/auth_test.rb
+- test/unit/blobs/blob_test.rb
+- test/unit/blobs/container_test.rb
+- test/unit/blobs/service_test.rb
+- test/unit/blobs/shared_access_signature_test.rb
+- test/unit/blobs_test.rb
+- test/unit/core/service_test.rb
+- test/unit/core/utils/interval_test.rb
+- test/unit/core/utils/queryable_test.rb
+- test/unit/core/utils/storage_service_properties_test.rb
+- test/unit/error_test.rb
+- test/unit/queues/message_test.rb
+- test/unit/queues/queue_test.rb
+- test/unit/queues/service_properties.rb
+- test/unit/request_test.rb
+- test/unit/response_test.rb
+- test/unit/service_bus/auth/authorizer_test.rb
+- test/unit/service_bus/auth/wrap_token_test.rb
+- test/unit/service_bus/queues/queue_test.rb
+- test/unit/service_bus/topics/topic_test.rb
+- test/unit/service_runtime/data/goalstate.xml
+- test/unit/service_runtime/data/roleenvironmentdata.xml
+- test/unit/service_runtime/data/runtime.xml
+- test/unit/service_runtime/role_environment_test.rb
+- test/unit/tables/auth/shared_key_lite_test.rb
+- test/unit/tables/auth/shared_key_test.rb
+- test/unit/tables/entities_collection_test.rb
+- test/unit/tables/entity_test.rb
+- test/unit/tables/table_test.rb
+- test/unit/tables_test.rb
+- test/unit/types_test.rb
+has_rdoc: true
+homepage: http://azure.com
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.6.2
+signing_key: 
+specification_version: 3
+summary: Implementation of several Windows Azure SDKs in ruby.
+test_files: []
